@@ -1,0 +1,57 @@
+<section class="tab-panel" id="services">
+  <div class="page-header">
+    <div>
+      <span class="page-eyebrow">SCOPE & PROGRESS</span>
+      <h2 class="page-title">Services</h2>
+    </div>
+    <div class="page-actions">
+      <input type="text" id="svcSearch" placeholder="🔍 Search services..." class="search-input" style="width: 240px;">
+      <select id="svcStatusFilter" class="search-input" style="width: 160px;">
+        <option value="">All statuses</option>
+        <option value="Not Started">Not Started</option>
+        <option value="In Progress">In Progress</option>
+        <option value="At Risk">At Risk</option>
+        <option value="Done">Done</option>
+        <option value="Overdue">Overdue</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="banner banner-info">
+    <strong>Mapping:</strong>
+    <strong>Baseline</strong> from Presales ·
+    <strong>Planned / Remaining / Status / Assignation</strong> manual (auto-saved) ·
+    <strong>Actuals / Actual dates</strong> from Odoo timesheets (parent task = service name) ·
+    <strong>Planned dates</strong> from Roadmap
+  </div>
+
+  <!-- KPI strip -->
+  <div class="kpi-strip kpi-strip-small">
+    <div class="kpi-card kpi-blue compact">
+      <div class="kpi-label">TOTAL SERVICES</div>
+      <div class="kpi-value" id="svcKpiTotal">—</div>
+    </div>
+    <div class="kpi-card kpi-amber compact">
+      <div class="kpi-label">IN PROGRESS</div>
+      <div class="kpi-value" id="svcKpiProgress">—</div>
+    </div>
+    <div class="kpi-card kpi-green compact">
+      <div class="kpi-label">DONE</div>
+      <div class="kpi-value" id="svcKpiDone">—</div>
+    </div>
+    <div class="kpi-card kpi-red compact">
+      <div class="kpi-label">OVERDUE</div>
+      <div class="kpi-value" id="svcKpiOverdue">—</div>
+    </div>
+  </div>
+
+  <!-- Department sub-tabs -->
+  <div class="sub-tabs-bar" id="deptTabsBar">
+    <!-- Populated by JS: Dev / Analysis / UI/UX / QC / UAT / PM -->
+  </div>
+
+  <!-- Table per department -->
+  <div id="servicesContent">
+    <div class="loading">Loading services…</div>
+  </div>
+</section>
